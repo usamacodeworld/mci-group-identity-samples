@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCI Group — Homepage Prototypes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared-system.css">
+  <style>
+    body {
+      background:
+        radial-gradient(1100px 460px at 8% -8%, #d9ecff 0%, transparent 55%),
+        radial-gradient(900px 400px at 95% 0%, #e8f6d8 0%, transparent 50%),
+        var(--mist);
+    }
+    .wrap { width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    header { display: grid; gap: .85rem; margin-bottom: 2rem; max-width: 58ch; }
+    header h1 { font-size: clamp(2rem, 4vw, 3.1rem); margin: 0; }
+    header p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+    .platforms-row {
+      display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 2rem;
+    }
+    .platforms-row span {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: #fff; border: 1px solid var(--line); border-radius: .65rem;
+      padding: .4rem .7rem; font-size: .8rem; font-weight: 600; color: var(--blue-dk);
+    }
+    .platforms-row img { width: 22px; height: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    a.card {
+      display: flex; flex-direction: column; text-decoration: none; color: inherit;
+      background: #fff; border: 1px solid var(--line); border-radius: 1rem; overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    a.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .preview { height: 140px; position: relative; }
+    .preview::after {
+      content: attr(data-label); position: absolute; left: 1rem; bottom: 1rem;
+      color: #fff; font-weight: 700; font-size: .92rem; text-shadow: 0 1px 8px rgba(0,0,0,.35);
+    }
+    .body { padding: 1rem 1.1rem 1.2rem; display: grid; gap: .35rem; }
+    .body h3 { margin: 0; font-size: 1.02rem; font-family: var(--font-en); letter-spacing: 0; }
+    .body p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .meta { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green); }
+    .p1 { background: linear-gradient(125deg, #084f92, #0b63b6 50%, #1a8cff); }
+    .p2 { background: linear-gradient(145deg, #0b63b6, #084f92 55%, #6ea52f); }
+    .p3 { background: linear-gradient(160deg, #0f2234, #084f92 55%, #8cc63f); }
+    .p4 { background: linear-gradient(120deg, #062a4a, #0b63b6, #6ea52f); }
+    .p5 { background: linear-gradient(135deg, #0a3d6b, #1c6fb8 45%, #c5e3ff); }
+    footer { margin-top: 2.5rem; color: var(--muted); font-size: .88rem; }
+    footer a { color: var(--blue-dk); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand-lockup" href="#">
+        <img class="mark" src="assets/concepts/mark-group.svg" alt="">
+        <div><strong>MCI Group</strong><small>Homepage prototypes</small></div>
+      </a>
+      <h1>5 MCI Group homepage directions</h1>
+      <p>
+        Each prototype is an MCI Group page — presenting the Group brand and routing into the four platforms.
+        Fonts, colors, and logo guidelines live separately in the brand system.
+      </p>
+    </header>
+
+    <div class="platforms-row" aria-label="Four platforms">
+      <span><img src="assets/concepts/mark-medconsult.svg" alt="">MedConsult</span>
+      <span><img src="assets/concepts/mark-academy.svg" alt="">Academy</span>
+      <span><img src="assets/concepts/mark-career.svg" alt="">Career</span>
+      <span><img src="assets/concepts/mark-research.svg" alt="">Research</span>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="01-clinical-horizon.html">
+        <div class="preview p1" data-label="01 · Clinical Horizon"></div>
+        <div class="body">
+          <div class="meta">Full-bleed Group homepage</div>
+          <h3>Clinical Horizon</h3>
+          <p>Authority hero, four platforms, Group purpose.</p>
+        </div>
+      </a>
+      <a class="card" href="02-global-care-atlas.html">
+        <div class="preview p2" data-label="02 · Global Care Atlas"></div>
+        <div class="body">
+          <div class="meta">Network layout</div>
+          <h3>Global Care Atlas</h3>
+          <p>Split hero, platform grid, reach stats.</p>
+        </div>
+      </a>
+      <a class="card" href="03-knowledge-lattice.html">
+        <div class="preview p3" data-label="03 · Knowledge Lattice"></div>
+        <div class="body">
+          <div class="meta">Modular structure</div>
+          <h3>Knowledge Lattice</h3>
+          <p>Dark hero, platform modules, Group quote.</p>
+        </div>
+      </a>
+      <a class="card" href="04-group-constellation.html">
+        <div class="preview p4" data-label="04 · Group Constellation"></div>
+        <div class="body">
+          <div class="meta">Portal homepage</div>
+          <h3>Group Constellation</h3>
+          <p>Single-screen Group hub into all four platforms.</p>
+        </div>
+      </a>
+      <a class="card" href="05-precision-signal.html">
+        <div class="preview p5" data-label="05 · Precision Signal"></div>
+        <div class="body">
+          <div class="meta">Editorial Group page</div>
+          <h3>Precision Signal</h3>
+          <p>Quiet tone, platform rail, Group purpose.</p>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      Need logos, fonts, or color scheme? See <a href="brand-system.html">brand-system.html</a> (separate from these prototypes).
+    </footer>
+  </div>
+</body>
+</html>

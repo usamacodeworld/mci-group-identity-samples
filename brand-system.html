@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCI Group — Shared Brand System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared-system.css">
+  <style>
+    body {
+      background:
+        radial-gradient(1000px 420px at 0% 0%, #d9ecff 0%, transparent 55%),
+        radial-gradient(800px 360px at 100% 0%, #e8f6d8 0%, transparent 50%),
+        var(--mist);
+    }
+    .wrap { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4rem; }
+    .top { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem; }
+    .top a.back {
+      text-decoration: none; font-weight: 700; color: #fff; background: var(--blue);
+      padding: .65rem 1rem; border-radius: .65rem; font-size: .88rem;
+    }
+    header { max-width: 58ch; margin-bottom: 2rem; }
+    header h1 { font-size: clamp(2rem, 4vw, 3rem); margin: .35rem 0 .7rem; }
+    header p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+    .panel {
+      background: #fff; border: 1px solid var(--line); border-radius: 1.1rem;
+      padding: 1.5rem 1.35rem 1.7rem; margin-bottom: 1rem;
+    }
+    .panel h2 { margin: 0 0 .4rem; font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+    .panel .intro { color: var(--muted); margin: 0 0 1.2rem; max-width: 62ch; }
+    .rule {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;
+    }
+    .rule .box {
+      border: 1px solid var(--line); border-radius: .9rem; padding: 1.1rem; background: #fbfdff;
+    }
+    .rule .box h3 { margin: 0 0 .55rem; font-size: .95rem; font-family: var(--font-en); letter-spacing: 0; }
+    .en-sample .big { font-family: var(--font-en-display); font-size: 1.85rem; margin: 0 0 .45rem; line-height: 1.15; }
+    .en-sample .small { margin: 0; color: var(--muted); font-size: .95rem; }
+    .ar-sample { direction: rtl; font-family: var(--font-ar); text-align: right; }
+    .ar-sample .big { font-size: 1.75rem; font-weight: 700; margin: 0 0 .45rem; line-height: 1.25; color: var(--ink); }
+    .ar-sample .small { margin: 0; color: var(--muted); font-size: 1rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+    .meta code {
+      background: var(--mist); border: 1px solid var(--line); border-radius: .35rem;
+      padding: .2rem .45rem; font-size: .74rem;
+    }
+    .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: .7rem; }
+    .swatch { border: 1px solid var(--line); border-radius: .8rem; overflow: hidden; background: #fff; }
+    .swatch i { display: block; height: 72px; }
+    .swatch div { padding: .65rem .7rem .75rem; }
+    .swatch strong { display: block; font-size: .85rem; }
+    .swatch span { font-size: .75rem; color: var(--muted); }
+    .logos { display: grid; gap: 1rem; }
+    .logo-row {
+      display: grid; grid-template-columns: 1.2fr .8fr; gap: 1rem; align-items: stretch;
+      border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; background: #f7fafc;
+    }
+    .logo-row .lock { padding: 1.2rem; display: grid; place-items: center; background: #fff; }
+    .logo-row .lock img { width: min(100%, 300px); height: auto; }
+    .logo-row .side { padding: 1.15rem 1.2rem; display: grid; align-content: center; gap: .35rem; }
+    .logo-row .side .n { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+    .logo-row .side h3 { margin: 0; font-size: 1.05rem; font-family: var(--font-en); letter-spacing: 0; }
+    .logo-row .side p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .marks { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+    .marks figure {
+      margin: 0; width: 88px; text-align: center; font-size: .72rem; color: var(--muted);
+    }
+    .marks img { width: 56px; height: 56px; margin: 0 auto .35rem; }
+    .note {
+      margin-top: 1rem; padding: 1rem 1.1rem; border-radius: .85rem;
+      background: #eef6ff; border: 1px solid #cfe0f5; color: #45607a; font-size: .9rem;
+    }
+    @media (max-width: 800px) {
+      .rule, .logo-row, .swatches { grid-template-columns: 1fr; }
+      .swatches { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand-lockup" href="index.html">
+        <img class="mark" src="assets/concepts/mark-group.svg" alt="">
+        <div><strong>MCI Group</strong><small>Shared brand system</small></div>
+      </a>
+      <a class="back" href="index.html">View 5 prototypes →</a>
+    </div>
+
+    <header>
+      <div class="kicker">One system for every platform</div>
+      <h1>Same fonts. Same colors. Same logo family.</h1>
+      <p>All platforms — MedConsult, Academy, Career, Research, and the Group — share this system so the brand feels identical everywhere.</p>
+    </header>
+
+    <section class="panel" id="fonts">
+      <div class="kicker">01 · Fonts (English + Arabic)</div>
+      <h2>Use these fonts on every platform</h2>
+      <p class="intro">Do not invent a different type stack per site. One English pair + one Arabic pair for the whole MCI Group.</p>
+
+      <div class="rule">
+        <div class="box en-sample">
+          <h3>English</h3>
+          <p class="big">Better care, shared identity.</p>
+          <p class="small">Body and UI stay clear for patients, partners, courses, jobs, and research pages.</p>
+          <div class="meta">
+            <code>Headlines: Fraunces</code>
+            <code>Body / UI: Manrope</code>
+          </div>
+        </div>
+        <div class="box ar-sample">
+          <h3 style="font-family:var(--font-ar);text-align:right;">العربية</h3>
+          <p class="big">رعاية أفضل بهوية واحدة</p>
+          <p class="small">نفس الخطوط في كل المنصات — استشارة، أكاديمية، وظائف، وأبحاث.</p>
+          <div class="meta" style="justify-content:flex-end;">
+            <code>العناوين والنص: Cairo</code>
+            <code>بديل: Tajawal</code>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Rule:</strong> English pages use Fraunces (headlines) + Manrope (everything else). Arabic pages use Cairo for both headlines and body. Optional Tajawal only if you need a heavier Arabic UI weight — never mix random Google fonts per platform.
+      </div>
+    </section>
+
+    <section class="panel" id="colors">
+      <div class="kicker">02 · Color scheme</div>
+      <h2>One palette for all platforms</h2>
+      <p class="intro">Blue = trust. Green = care. Navy = text. Every platform uses these exact tokens — no separate “Career purple” or “Academy orange.”</p>
+
+      <div class="swatches">
+        <div class="swatch"><i style="background:#0B63B6"></i><div><strong>Blue</strong><span>#0B63B6</span></div></div>
+        <div class="swatch"><i style="background:#084F92"></i><div><strong>Blue Dark</strong><span>#084F92</span></div></div>
+        <div class="swatch"><i style="background:#6EA52F"></i><div><strong>Green</strong><span>#6EA52F</span></div></div>
+        <div class="swatch"><i style="background:#0F2234"></i><div><strong>Ink</strong><span>#0F2234</span></div></div>
+        <div class="swatch"><i style="background:#F3F7FB;border-bottom:1px solid var(--line)"></i><div><strong>Mist</strong><span>#F3F7FB</span></div></div>
+      </div>
+      <div class="swatches" style="margin-top:.7rem;">
+        <div class="swatch"><i style="background:#1A8CFF"></i><div><strong>Blue Light</strong><span>#1A8CFF</span></div></div>
+        <div class="swatch"><i style="background:#8CC63F"></i><div><strong>Green Light</strong><span>#8CC63F</span></div></div>
+        <div class="swatch"><i style="background:#5A7FA8"></i><div><strong>Muted</strong><span>#5A7FA8</span></div></div>
+        <div class="swatch"><i style="background:#D7E6F2"></i><div><strong>Line</strong><span>#D7E6F2</span></div></div>
+        <div class="swatch"><i style="background:#FFFFFF;border-bottom:1px solid var(--line)"></i><div><strong>White</strong><span>#FFFFFF</span></div></div>
+      </div>
+    </section>
+
+    <section class="panel" id="logos">
+      <div class="kicker">03 · Five logo samples</div>
+      <h2>One logo family — Group + 4 platforms</h2>
+      <p class="intro">Same blue/green DNA. Different metaphor per platform. Use these concept lockups so every site feels part of MCI Group.</p>
+
+      <div class="logos">
+        <article class="logo-row">
+          <div class="lock"><img src="assets/concepts/lockup-group.svg" alt="MCI Group"></div>
+          <div class="side">
+            <div class="n">01 · Group</div>
+            <h3>MCI Group</h3>
+            <p>Holding mark. Use on the umbrella homepage, decks, and social avatar.</p>
+          </div>
+        </article>
+        <article class="logo-row">
+          <div class="lock"><img src="assets/concepts/lockup-medconsult.svg" alt="MedConsult"></div>
+          <div class="side">
+            <div class="n">02 · MedConsult</div>
+            <h3>MCI MedConsult</h3>
+            <p>Globe + care pulse — international consultation pathways.</p>
+          </div>
+        </article>
+        <article class="logo-row">
+          <div class="lock"><img src="assets/concepts/lockup-academy.svg" alt="Academy"></div>
+          <div class="side">
+            <div class="n">03 · Academy</div>
+            <h3>MCI Academy</h3>
+            <p>Book + growth mark — clinical education under the same brand.</p>
+          </div>
+        </article>
+        <article class="logo-row">
+          <div class="lock"><img src="assets/concepts/lockup-career.svg" alt="Career"></div>
+          <div class="side">
+            <div class="n">04 · Career</div>
+            <h3>MCI Career</h3>
+            <p>People / twin-wing mark — talent &amp; licensing, same palette.</p>
+          </div>
+        </article>
+        <article class="logo-row">
+          <div class="lock"><img src="assets/concepts/lockup-research.svg" alt="Research"></div>
+          <div class="side">
+            <div class="n">05 · Research</div>
+            <h3>MCI Research</h3>
+            <p>Evidence nodes — research identity that still reads as MCI.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="marks">
+        <figure><img src="assets/concepts/mark-group.svg" alt=""><figcaption>Group</figcaption></figure>
+        <figure><img src="assets/concepts/mark-medconsult.svg" alt=""><figcaption>MedConsult</figcaption></figure>
+        <figure><img src="assets/concepts/mark-academy.svg" alt=""><figcaption>Academy</figcaption></figure>
+        <figure><img src="assets/concepts/mark-career.svg" alt=""><figcaption>Career</figcaption></figure>
+        <figure><img src="assets/concepts/mark-research.svg" alt=""><figcaption>Research</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="kicker">Next</div>
+      <h2>5 professional MCI Group prototypes</h2>
+      <p class="intro" style="margin-bottom:1rem;">All five homepage layouts use this exact system — same fonts, colors, and logos. Only the structure changes.</p>
+      <a class="btn btn-primary" href="index.html">Open prototype gallery</a>
+    </section>
+  </div>
+</body>
+</html>

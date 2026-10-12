@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCI Group — Global Care Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared-system.css">
+  <style>
+    body { background: #06111f; color: #fff; }
+    .hero {
+      min-height: 100vh; min-height: 100dvh; position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+      background: #06111f url('assets/heroes/hero-global-atlas.jpg') center/cover no-repeat;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 60% at 18% 45%, rgba(11,99,182,.35), transparent 70%),
+        linear-gradient(90deg, rgba(6,17,31,.92) 0%, rgba(6,17,31,.72) 42%, rgba(6,17,31,.28) 100%);
+    }
+    .orbit { position: absolute; inset: 0; pointer-events: none; opacity: .85; }
+    .orbit svg { width: 100%; height: 100%; }
+    .dot { fill: #8CC63F; opacity: 0; animation: pop .7s ease forwards; }
+    .dot:nth-child(1) { animation-delay: .3s; }
+    .dot:nth-child(2) { animation-delay: .55s; }
+    .dot:nth-child(3) { animation-delay: .8s; }
+    .dot:nth-child(4) { animation-delay: 1.05s; }
+    .path {
+      fill: none; stroke: rgba(255,255,255,.28); stroke-width: 1.2;
+      stroke-dasharray: 5 9; animation: dash 22s linear infinite;
+    }
+    @keyframes pop { to { opacity: 1; } }
+    @keyframes dash { to { stroke-dashoffset: -160; } }
+    .hero > .container { position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; }
+    .hero .hero-copy { margin-top: auto; }
+    .hero .hero-copy p { color: rgba(255,255,255,.88); }
+    .strip { background: #fff; color: var(--ink); padding: 4rem 0; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .stats div { background: var(--mist); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; }
+    .stats b { font-family: var(--font-en-display); font-size: 2rem; color: var(--blue-dk); display: block; }
+    .stats span { color: var(--muted); font-size: .88rem; }
+    .site-footer { color: rgba(255,255,255,.65); border-top-color: rgba(255,255,255,.12); }
+    .site-footer a { color: #fff; }
+    @media (max-width: 900px) { .stats { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="orbit" aria-hidden="true">
+      <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+        <path class="path" d="M180 420C320 280 480 250 620 320S920 480 1080 360"/>
+        <path class="path" d="M140 250C300 180 520 200 700 280S980 220 1120 180"/>
+        <circle class="dot" cx="220" cy="390" r="5"/>
+        <circle class="dot" cx="620" cy="320" r="6"/>
+        <circle class="dot" cx="920" cy="430" r="5"/>
+        <circle class="dot" cx="1040" cy="210" r="4"/>
+      </svg>
+    </div>
+    <div class="container">
+      <nav class="mci-nav mci-nav--on-dark" aria-label="Primary">
+        <a class="brand-lockup" href="index.html">
+          <img class="mark" src="assets/concepts/mark-group.svg" alt="">
+          <div><strong>MCI Group</strong><small>Global Care Atlas</small></div>
+        </a>
+        <div class="mci-nav__links">
+          <a href="#platforms">Platforms</a>
+          <a href="#reach">Reach</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="mci-nav__actions">
+          <a class="nav-cta" href="index.html">All samples</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <div class="kicker" style="color:var(--green-lt)">MCI Group</div>
+        <h1>Care that moves with people.</h1>
+        <p>From Riyadh to the world — four specialised platforms under one Group brand.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#platforms" style="background:#fff;color:var(--blue-dk)">View platforms</a>
+          <a class="btn btn-ghost" href="#reach">Our reach</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="strip" id="platforms">
+    <div class="container">
+      <div class="kicker">Platforms</div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);margin:.4rem 0 1.5rem;color:var(--ink)">One group. Four platforms.</h2>
+      <div class="platform-grid">
+        <a class="platform-card" href="https://mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-medconsult.svg" alt="">
+          <h3>MedConsult</h3>
+          <p>Pathways to leading hospitals worldwide.</p>
+        </a>
+        <a class="platform-card" href="https://academy.mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-academy.svg" alt="">
+          <h3>Academy</h3>
+          <p>Skills that travel with every clinician.</p>
+        </a>
+        <a class="platform-card" href="https://career.mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-career.svg" alt="">
+          <h3>Career</h3>
+          <p>People powering better care.</p>
+        </a>
+        <a class="platform-card" href="https://research.mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-research.svg" alt="">
+          <h3>Research</h3>
+          <p>Evidence that guides safer decisions.</p>
+        </a>
+      </div>
+      <div class="stats" id="reach">
+        <div><b>4</b><span>Platforms under MCI Group</span></div>
+        <div><b>20+</b><span>Countries in the care network</span></div>
+        <div id="about"><b>1</b><span>Trusted Group brand</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer container">
+    <span>MCI Group · Prototype 02 · Global Care Atlas</span>
+    <a href="index.html">Back to gallery</a>
+  </footer>
+</body>
+</html>

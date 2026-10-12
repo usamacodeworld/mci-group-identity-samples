@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI MedConsult mark">
+  <circle cx="32" cy="32" r="28" fill="#F3F7FB" stroke="#0B63B6" stroke-width="2"/>
+  <ellipse cx="32" cy="32" rx="12" ry="26" stroke="#0B63B6" stroke-width="1.6"/>
+  <path d="M8 32h48M14 20h36M14 44h36" stroke="#0B63B6" stroke-width="1.4" opacity=".55"/>
+  <path d="M12 34h10l4-8 6 16 5-10 4 6h11" stroke="#6EA52F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCI Group — Clinical Horizon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared-system.css">
+  <style>
+    .hero {
+      min-height: 100vh; min-height: 100dvh; color: #fff; position: relative;
+      display: flex; flex-direction: column; overflow: hidden;
+      background: #041628 url('assets/heroes/hero-clinical-horizon.jpg') center/cover no-repeat;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(105deg, rgba(4,22,40,.88) 0%, rgba(8,79,146,.55) 46%, rgba(4,22,40,.35) 72%, rgba(110,165,47,.22) 100%),
+        linear-gradient(to top, rgba(4,22,40,.75) 0%, transparent 45%);
+    }
+    .hero-ring {
+      position: absolute; right: -8%; top: 12%; width: min(52vw, 560px); height: min(52vw, 560px);
+      border: 1px solid rgba(255,255,255,.14); border-radius: 50%;
+      animation: drift 18s ease-in-out infinite alternate; pointer-events: none;
+    }
+    .hero-ring::after {
+      content: ""; position: absolute; inset: 12%;
+      border: 1px solid rgba(140,198,63,.28); border-radius: 50%;
+    }
+    .hero-line {
+      position: absolute; left: 0; right: 0; bottom: 38%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), rgba(140,198,63,.55), transparent);
+      pointer-events: none;
+    }
+    @keyframes drift { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(18px) rotate(8deg); } }
+    .hero > .container { position: relative; z-index: 2; width: min(1160px, calc(100% - 2rem)); flex: 1; display: flex; flex-direction: column; }
+    .hero .hero-copy {
+      margin-top: auto; color: #fff;
+      opacity: 0; transform: translateY(16px); animation: rise .85s ease forwards .15s;
+    }
+    .hero .hero-copy p { color: rgba(255,255,255,.9); }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    section.block { padding: 4.5rem 0; }
+    .section-head { max-width: 48ch; margin-bottom: 1.8rem; }
+    .section-head h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); margin: .35rem 0 .55rem; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .values article {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.35rem;
+    }
+    .values h3 { margin: 0 0 .4rem; font-family: var(--font-en); font-size: 1rem; letter-spacing: 0; }
+    .values p { margin: 0; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 800px) {
+      .values { grid-template-columns: 1fr; }
+      .hero-ring { opacity: .4; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-ring" aria-hidden="true"></div>
+    <div class="hero-line" aria-hidden="true"></div>
+    <div class="container">
+      <nav class="mci-nav mci-nav--on-dark" aria-label="Primary">
+        <a class="brand-lockup" href="index.html">
+          <img class="mark" src="assets/concepts/mark-group.svg" alt="">
+          <div><strong>MCI Group</strong><small>Clinical Horizon</small></div>
+        </a>
+        <div class="mci-nav__links">
+          <a href="#platforms">Platforms</a>
+          <a href="#about">About</a>
+          <a href="#purpose">Purpose</a>
+        </div>
+        <div class="mci-nav__actions">
+          <a class="nav-cta" href="index.html">All samples</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <div class="kicker" style="color:#c8e89a">MCI Group</div>
+        <h1>MCI Group</h1>
+        <p>Global medical expertise under one trusted brand — consultation, education, careers, and research.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#platforms" style="background:#fff;color:var(--blue-dk)">Explore platforms</a>
+          <a class="btn btn-ghost" href="#about">Our purpose</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="block" id="platforms">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Our platforms</div>
+        <h2>Four pathways to better care.</h2>
+        <p>MCI Group brings together four specialised platforms — one identity, one standard of excellence.</p>
+      </div>
+      <div class="platform-grid">
+        <a class="platform-card" href="https://mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-medconsult.svg" alt="">
+          <h3>MedConsult</h3>
+          <p>International second opinions and care pathways with world-class hospitals.</p>
+        </a>
+        <a class="platform-card" href="https://academy.mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-academy.svg" alt="">
+          <h3>Academy</h3>
+          <p>Clinical education that raises standards for practitioners and teams.</p>
+        </a>
+        <a class="platform-card" href="https://career.mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-career.svg" alt="">
+          <h3>Career</h3>
+          <p>Matching healthcare talent with verified employers and licensing support.</p>
+        </a>
+        <a class="platform-card" href="https://research.mci.med.sa" target="_blank" rel="noopener">
+          <img class="mark" src="assets/concepts/mark-research.svg" alt="">
+          <h3>Research</h3>
+          <p>Evidence and insight that advance safer, smarter care decisions.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about" style="padding-top:0">
+    <div class="container">
+      <div class="section-head" id="purpose">
+        <div class="kicker">About MCI Group</div>
+        <h2>Human first. Clinically precise.</h2>
+      </div>
+      <div class="values">
+        <article><h3>Trust</h3><p>Clear steps, verified partners, transparent communication across every platform.</p></article>
+        <article><h3>Excellence</h3><p>Global centres, specialist networks, and measurable clinical outcomes.</p></article>
+        <article><h3>Care</h3><p>People at the centre — patients, professionals, and partners alike.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer container">
+    <span>MCI Group · Prototype 01 · Clinical Horizon</span>
+    <a href="index.html">Back to gallery</a>
+  </footer>
+</body>
+</html>
