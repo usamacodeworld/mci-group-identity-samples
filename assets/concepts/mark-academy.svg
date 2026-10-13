@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI Academy mark">
-  <rect width="64" height="64" rx="14" fill="#084F92"/>
-  <path d="M10 28l22-10 22 10-22 10L10 28Z" fill="#fff"/>
-  <path d="M18 31v12c6 4 14 6 14 6s8-2 14-6V31" stroke="#8CC63F" stroke-width="2.4" stroke-linejoin="round"/>
-  <path d="M54 28v14" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-  <circle cx="54" cy="44" r="2.4" fill="#6EA52F"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI Academy">
+  <defs>
+    <linearGradient id="ma" x1="10" y1="4" x2="54" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B63B6"/>
+      <stop offset="1" stop-color="#084F92"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#ma)"/>
+  <path d="M32 16L12 25.5 32 35l20-9.5L32 16Z" fill="#fff"/>
+  <path d="M18 29.5v11.5c0 .4.2.8.5 1.1C23.2 46.2 28 48 32 48s8.8-1.8 13.5-5.9c.3-.3.5-.7.5-1.1V29.5" stroke="#8CC63F" stroke-width="2.4" stroke-linejoin="round" fill="none"/>
+  <path d="M52 25.5V40" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="52" cy="43.5" r="3" fill="#6EA52F"/>
 </svg>

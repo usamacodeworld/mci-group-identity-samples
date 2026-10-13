@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI MedConsult mark">
-  <circle cx="32" cy="32" r="28" fill="#F3F7FB" stroke="#0B63B6" stroke-width="2"/>
-  <ellipse cx="32" cy="32" rx="12" ry="26" stroke="#0B63B6" stroke-width="1.6"/>
-  <path d="M8 32h48M14 20h36M14 44h36" stroke="#0B63B6" stroke-width="1.4" opacity=".55"/>
-  <path d="M12 34h10l4-8 6 16 5-10 4 6h11" stroke="#6EA52F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI Medical Consultation">
+  <defs>
+    <linearGradient id="mc" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A8CFF"/>
+      <stop offset="1" stop-color="#0B63B6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#mc)"/>
+  <circle cx="32" cy="32" r="18" stroke="#fff" stroke-width="2.2" fill="none"/>
+  <ellipse cx="32" cy="32" rx="8" ry="18" stroke="#fff" stroke-width="1.6" fill="none" opacity=".9"/>
+  <path d="M14 32h36" stroke="#fff" stroke-width="1.6" opacity=".75"/>
+  <path d="M18 22.5h28M18 41.5h28" stroke="#fff" stroke-width="1.2" opacity=".45"/>
+  <circle cx="32" cy="32" r="3.2" fill="#8CC63F"/>
 </svg>

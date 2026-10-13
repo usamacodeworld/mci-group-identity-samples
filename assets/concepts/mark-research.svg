@@ -1,9 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI Research mark">
-  <rect width="64" height="64" rx="14" fill="#0F2234"/>
-  <circle cx="24" cy="24" r="5" fill="#0B63B6"/>
-  <circle cx="42" cy="20" r="4" fill="#1A8CFF"/>
-  <circle cx="40" cy="38" r="5.5" fill="#6EA52F"/>
-  <circle cx="22" cy="42" r="3.5" fill="#8CC63F"/>
-  <circle cx="32" cy="30" r="3" fill="#fff"/>
-  <path d="M27.5 26.5l11-5M26 27.5l11.5 8.5M25 39.5l5.5-7.5M34.5 31.5l4 5" stroke="#fff" stroke-width="1.6" opacity=".85"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MCI Medical Research">
+  <defs>
+    <linearGradient id="mr" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A3348"/>
+      <stop offset="1" stop-color="#0F2234"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#mr)"/>
+  <!-- Orbit rings -->
+  <ellipse cx="32" cy="30" rx="18" ry="10" stroke="#1A8CFF" stroke-width="1.6" fill="none" opacity=".9" transform="rotate(-28 32 30)"/>
+  <ellipse cx="32" cy="30" rx="18" ry="10" stroke="#6EA52F" stroke-width="1.6" fill="none" opacity=".85" transform="rotate(32 32 30)"/>
+  <circle cx="32" cy="30" r="5.5" fill="#fff"/>
+  <circle cx="32" cy="30" r="2.4" fill="#0B63B6"/>
+  <!-- Nodes -->
+  <circle cx="18" cy="22" r="2.4" fill="#1A8CFF"/>
+  <circle cx="48" cy="24" r="2.4" fill="#8CC63F"/>
+  <circle cx="42" cy="42" r="2.2" fill="#6EA52F"/>
 </svg>

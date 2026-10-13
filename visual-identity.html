@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCI Group — Logo Options A · B · C</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared-system.css">
+  <style>
+    body {
+      background:
+        radial-gradient(1100px 480px at 6% -10%, #d9ecff 0%, transparent 55%),
+        radial-gradient(900px 420px at 100% 0%, #e8f6d8 0%, transparent 48%),
+        var(--mist);
+    }
+    .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4.5rem; }
+    .top {
+      display: flex; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap; align-items: center; margin-bottom: 1.5rem;
+    }
+    .top .brand-img { height: 42px; width: auto; }
+    .top .links { display: flex; flex-wrap: wrap; gap: .55rem; }
+    .top .links a {
+      text-decoration: none; font-weight: 700; font-size: .85rem;
+      padding: .6rem .95rem; border-radius: .6rem;
+      background: #fff; color: var(--blue-dk); border: 1px solid var(--line);
+    }
+    .top .links a.primary { background: var(--blue); color: #fff; border-color: transparent; }
+
+    .hero { max-width: 60ch; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2rem, 4.2vw, 3rem); margin: .35rem 0 .75rem; }
+    .hero p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+
+    .picker {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem;
+      margin-bottom: 2rem; position: sticky; top: .75rem; z-index: 20;
+    }
+    .picker a {
+      text-decoration: none; color: inherit; background: #fff;
+      border: 1px solid var(--line); border-radius: 1rem; padding: 1rem 1.05rem;
+      box-shadow: 0 10px 28px rgba(15, 34, 52, .06);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .picker a:hover { transform: translateY(-2px); border-color: var(--blue); }
+    .picker .opt {
+      font-size: .7rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--green); margin-bottom: .25rem;
+    }
+    .picker strong { display: block; font-size: .95rem; margin-bottom: .2rem; }
+    .picker span { font-size: .8rem; color: var(--muted); }
+
+    .option {
+      background: #fff; border: 1px solid var(--line); border-radius: 1.2rem;
+      padding: 1.5rem 1.35rem 1.7rem; margin-bottom: 1.25rem;
+      scroll-margin-top: 6.5rem;
+    }
+    .option-head {
+      display: flex; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.25rem;
+    }
+    .option-head h2 { margin: .2rem 0 .35rem; font-size: clamp(1.4rem, 2.5vw, 1.85rem); }
+    .option-head p { margin: 0; color: var(--muted); max-width: 48ch; }
+    .badge {
+      font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      background: #eef6ff; color: var(--blue-dk); border: 1px solid #cfe0f5;
+      padding: .45rem .7rem; border-radius: .55rem; white-space: nowrap;
+    }
+
+    .logo-row {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: .9rem; margin-bottom: 1.1rem;
+    }
+    .logo-box {
+      border: 1px solid var(--line); border-radius: 1rem; background: #fff;
+      min-height: 170px; display: grid; place-items: center; padding: 1.25rem;
+    }
+    .logo-box img { width: min(100%, 420px); height: auto; }
+    .logo-box.dark {
+      background: linear-gradient(145deg, #0B63B6, #084F92 75%);
+      box-shadow: 0 14px 34px rgba(11, 99, 182, .25);
+    }
+    .logo-box.dark img { width: min(100%, 400px); }
+    .mark-only {
+      width: 96px; height: 96px; object-fit: contain;
+      background: #fff; border-radius: 18px; padding: .5rem;
+      border: 1px solid rgba(255,255,255,.35);
+    }
+
+    .sub {
+      margin: 1.15rem 0 .65rem;
+      font-size: .78rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green);
+    }
+    .apps { display: grid; gap: .85rem; }
+    .app {
+      border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; background: #f4f8fc;
+    }
+    .app .label {
+      display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap;
+      padding: .8rem 1rem; background: #fff; border-bottom: 1px solid var(--line);
+    }
+    .app .label h3 {
+      margin: 0; font-size: .95rem; font-family: var(--font-en); letter-spacing: 0;
+    }
+    .app .label span { font-size: .74rem; color: var(--muted); font-weight: 600; }
+    .app .stage { padding: 1rem; }
+    .app .stage img {
+      width: 100%; height: auto; display: block; border-radius: .75rem;
+      border: 1px solid var(--line); background: #fff;
+    }
+    .app.flyer .stage { display: grid; place-items: center; }
+    .app.flyer .stage img { max-width: 380px; }
+
+    .case {
+      border: 1px solid var(--line); border-radius: 1rem; overflow: hidden;
+      background: linear-gradient(180deg, #f7fafc 0%, #fff 55%);
+      margin-bottom: .35rem;
+    }
+    .case .case-top {
+      padding: 1.15rem 1.2rem 1rem;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+    .case .case-top h3 {
+      margin: .2rem 0 .45rem; font-size: 1.15rem;
+      font-family: var(--font-en-display); letter-spacing: -.01em;
+    }
+    .case .case-top p { margin: 0; color: var(--muted); font-size: .95rem; max-width: 68ch; }
+    .case-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    }
+    .case-grid article {
+      padding: 1.1rem 1.2rem 1.2rem; border-top: 1px solid var(--line);
+    }
+    .case-grid article:nth-child(odd) { border-right: 1px solid var(--line); }
+    .case-grid h4 {
+      margin: 0 0 .45rem; font-size: .78rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--blue-dk);
+      font-family: var(--font-en);
+    }
+    .case-grid p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+    .case-grid ul {
+      margin: 0; padding: 0; list-style: none; display: grid; gap: .45rem;
+    }
+    .case-grid li {
+      font-size: .9rem; color: var(--ink); display: flex; gap: .55rem; line-height: 1.45;
+    }
+    .case-grid li::before {
+      content: ""; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); margin-top: .45rem; flex-shrink: 0;
+    }
+    .case-grid li strong { font-weight: 700; color: var(--ink); }
+
+    .note {
+      margin-top: .35rem; padding: 1rem 1.1rem; border-radius: .85rem;
+      background: #eef6ff; border: 1px solid #cfe0f5; color: #45607a; font-size: .92rem;
+    }
+
+    @media (max-width: 860px) {
+      .picker, .logo-row, .case-grid { grid-template-columns: 1fr; }
+      .picker { position: static; }
+      .case-grid article:nth-child(odd) { border-right: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a href="index.html">
+        <img class="brand-img" src="assets/options/option-a-logo.jpg" alt="MCI Group">
+      </a>
+      <div class="links">
+        <a href="brand-system.html">Brand system</a>
+        <a class="primary" href="index.html">Prototypes →</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="kicker">Pick one master logo</div>
+      <h1>3 MCI Group logo options</h1>
+      <p>
+        Each option includes a design case study, shirts, business cards, flyer,
+        and social media (avatar, cover, post). Pick A, B, or C to lock as the official MCI Group identity.
+      </p>
+    </header>
+
+    <nav class="picker" aria-label="Logo options">
+      <a href="#option-a">
+        <div class="opt">Option A</div>
+        <strong>People / Care wings</strong>
+        <span>Same DNA as MCI Career</span>
+      </a>
+      <a href="#option-b">
+        <div class="opt">Option B</div>
+        <strong>M monogram</strong>
+        <span>Strong lettermark</span>
+      </a>
+      <a href="#option-c">
+        <div class="opt">Option C</div>
+        <strong>Medical shield</strong>
+        <span>Classic healthcare trust</span>
+      </a>
+    </nav>
+
+    <!-- OPTION A -->
+    <section class="option" id="option-a">
+      <div class="option-head">
+        <div>
+          <div class="kicker">Option A</div>
+          <h2>People / Care wings</h2>
+          <p>Closest to career.mci.med.sa — twin-wing mark for people-powered care. Best if Group and Career should feel like one family.</p>
+        </div>
+        <div class="badge">Recommend for brand family</div>
+      </div>
+
+      <div class="logo-row">
+        <div class="logo-box">
+          <img src="assets/options/option-a-logo.jpg" alt="Option A logo light">
+        </div>
+        <div class="logo-box dark">
+          <img src="assets/options/option-a-white.jpg" alt="Option A logo dark">
+        </div>
+      </div>
+
+      <div class="sub">00 · Case study</div>
+      <div class="case">
+        <div class="case-top">
+          <div class="kicker">Design rationale</div>
+          <h3>Why we designed Option A</h3>
+          <p>
+            MCI Group sits above Consultation, Academy, Career, and Research. Option A uses the same
+            “people / care” language as career.mci.med.sa so the holding brand and platforms feel like
+            one family — useful for social launch and cross-platform marketing.
+          </p>
+        </div>
+        <div class="case-grid">
+          <article>
+            <h4>What it represents</h4>
+            <ul>
+              <li><strong>Circle (head)</strong> — the human at the centre of care</li>
+              <li><strong>Twin wings</strong> — support, partnership, and global reach</li>
+              <li><strong>Blue + green</strong> — trust (medical) + growth / vitality (care)</li>
+              <li><strong>Open upward form</strong> — progress and a healthier future</li>
+            </ul>
+          </article>
+          <article>
+            <h4>Why this direction</h4>
+            <p>
+              Best when MCI Group should feel warm, human, and aligned with Career.
+              Easy to recognise on shirts, social avatars, and cards because the mark is simple
+              and already proven on a live MCI platform.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sub">01 · Shirts</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>Logos on shirts</h3><span>Navy polo + white tee</span></div>
+          <div class="stage"><img src="assets/options/option-a-shirts.jpg" alt="Option A shirts"></div>
+        </article>
+      </div>
+
+      <div class="sub">02 · Business cards</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>Logos on business cards</h3><span>Front &amp; back</span></div>
+          <div class="stage"><img src="assets/options/option-a-cards.jpg" alt="Option A cards"></div>
+        </article>
+      </div>
+
+      <div class="sub">03 · Flyer</div>
+      <div class="apps">
+        <article class="app flyer">
+          <div class="label"><h3>Flyer</h3><span>Print &amp; social launch</span></div>
+          <div class="stage"><img src="assets/options/option-a-flyer.jpg" alt="Option A flyer"></div>
+        </article>
+      </div>
+
+      <div class="sub">04 · Social media</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>How it looks on social</h3><span>Avatar · LinkedIn cover · Instagram post</span></div>
+          <div class="stage"><img src="assets/options/option-a-social.jpg" alt="Option A social media"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPTION B -->
+    <section class="option" id="option-b">
+      <div class="option-head">
+        <div>
+          <div class="kicker">Option B</div>
+          <h2>M monogram</h2>
+          <p>Bold geometric “M” with a green care signal. Strong holding-company look — distinct from Career’s twin-wing, still in the same blue/green system.</p>
+        </div>
+        <div class="badge">Distinct Group mark</div>
+      </div>
+
+      <div class="logo-row">
+        <div class="logo-box">
+          <img src="assets/options/option-b-logo.jpg" alt="Option B logo light">
+        </div>
+        <div class="logo-box dark">
+          <img src="assets/options/option-b-white.jpg" alt="Option B logo dark">
+        </div>
+      </div>
+
+      <div class="sub">00 · Case study</div>
+      <div class="case">
+        <div class="case-top">
+          <div class="kicker">Design rationale</div>
+          <h3>Why we designed Option B</h3>
+          <p>
+            A holding company often needs a mark that is clearly “Group” — not the same icon as one
+            platform. Option B builds a strong <strong>M</strong> monogram so MCI Group owns a unique
+            lettermark while platforms keep their own metaphors (globe, academy, wings, research).
+          </p>
+        </div>
+        <div class="case-grid">
+          <article>
+            <h4>What it represents</h4>
+            <ul>
+              <li><strong>Letter M</strong> — MCI; memorable monogram for a group brand</li>
+              <li><strong>Pathway / peaks</strong> — clinical journeys and rising standards</li>
+              <li><strong>Green care dot</strong> — life, signal, and human care inside the system</li>
+              <li><strong>Blue gradient</strong> — depth, trust, and medical authority</li>
+            </ul>
+          </article>
+          <article>
+            <h4>Why this direction</h4>
+            <p>
+              Best when Group should look more corporate and distinct from Career.
+              The monogram works well on embroidery, favicons, and decks where a single letter
+              reads faster than a complex symbol.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sub">01 · Shirts</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>Logos on shirts</h3><span>Navy polo + white tee</span></div>
+          <div class="stage"><img src="assets/options/option-b-shirts.jpg" alt="Option B shirts"></div>
+        </article>
+      </div>
+
+      <div class="sub">02 · Business cards</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>Logos on business cards</h3><span>Front &amp; back</span></div>
+          <div class="stage"><img src="assets/options/option-b-cards.jpg" alt="Option B cards"></div>
+        </article>
+      </div>
+
+      <div class="sub">03 · Flyer</div>
+      <div class="apps">
+        <article class="app flyer">
+          <div class="label"><h3>Flyer</h3><span>Print &amp; social launch</span></div>
+          <div class="stage"><img src="assets/options/option-b-flyer.jpg" alt="Option B flyer"></div>
+        </article>
+      </div>
+
+      <div class="sub">04 · Social media</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>How it looks on social</h3><span>Avatar · LinkedIn cover · Instagram post</span></div>
+          <div class="stage"><img src="assets/options/option-b-social.jpg" alt="Option B social media"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPTION C -->
+    <section class="option" id="option-c">
+      <div class="option-head">
+        <div>
+          <div class="kicker">Option C</div>
+          <h2>Medical shield</h2>
+          <p>Shield + cross + globe arc — classic healthcare trust. Reads instantly as medical; good if Group should feel more institutional than Career.</p>
+        </div>
+        <div class="badge">Healthcare authority</div>
+      </div>
+
+      <div class="logo-row">
+        <div class="logo-box">
+          <img src="assets/options/option-c-logo.jpg" alt="Option C logo light">
+        </div>
+        <div class="logo-box dark">
+          <img class="mark-only" src="assets/options/option-c-mark.jpg" alt="Option C mark">
+        </div>
+      </div>
+
+      <div class="sub">00 · Case study</div>
+      <div class="case">
+        <div class="case-top">
+          <div class="kicker">Design rationale</div>
+          <h3>Why we designed Option C</h3>
+          <p>
+            International medical groups are often recognised through symbols of protection and healing.
+            Option C uses a shield, cross, and globe arc so MCI Group reads instantly as a trusted
+            healthcare organisation — especially for partners, hospitals, and Arabic/English audiences
+            who expect clear medical cues.
+          </p>
+        </div>
+        <div class="case-grid">
+          <article>
+            <h4>What it represents</h4>
+            <ul>
+              <li><strong>Shield</strong> — protection, reliability, and patient safety</li>
+              <li><strong>Medical cross</strong> — care, treatment, and clinical purpose</li>
+              <li><strong>Globe arc</strong> — international network and global pathways</li>
+              <li><strong>Green accent</strong> — hope, recovery, and healthier communities</li>
+            </ul>
+          </article>
+          <article>
+            <h4>Why this direction</h4>
+            <p>
+              Best when Group should feel institutional and medically authoritative —
+              closer to hospital / network branding than to a lifestyle or career brand.
+              Strong for official documents, partnerships, and print stationery.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sub">01 · Shirts</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>Logos on shirts</h3><span>Navy polo + white tee</span></div>
+          <div class="stage"><img src="assets/options/option-c-shirts.jpg" alt="Option C shirts"></div>
+        </article>
+      </div>
+
+      <div class="sub">02 · Business cards</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>Logos on business cards</h3><span>Front &amp; back</span></div>
+          <div class="stage"><img src="assets/options/option-c-cards.jpg" alt="Option C cards"></div>
+        </article>
+      </div>
+
+      <div class="sub">03 · Flyer</div>
+      <div class="apps">
+        <article class="app flyer">
+          <div class="label"><h3>Flyer</h3><span>Print &amp; social launch</span></div>
+          <div class="stage"><img src="assets/options/option-c-flyer.jpg" alt="Option C flyer"></div>
+        </article>
+      </div>
+
+      <div class="sub">04 · Social media</div>
+      <div class="apps">
+        <article class="app">
+          <div class="label"><h3>How it looks on social</h3><span>Avatar · LinkedIn cover · Instagram / X post</span></div>
+          <div class="stage"><img src="assets/options/option-c-social.jpg" alt="Option C social media"></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="note">
+      <strong>Next step:</strong> Reply with <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>.
+      We will lock that logo as the official MCI Group identity and apply it across the site, social, and all platforms.
+    </div>
+  </div>
+</body>
+</html>

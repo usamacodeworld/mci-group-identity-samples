@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" fill="none" role="img" aria-label="MCI Career">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" fill="none" role="img" aria-label="MCI Career">
   <defs>
-    <linearGradient id="cl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B63B6"/><stop offset="1" stop-color="#084F92"/></linearGradient>
-    <linearGradient id="cr" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CC63F"/><stop offset="1" stop-color="#6EA52F"/></linearGradient>
+    <linearGradient id="cbl2" x1="8" y1="14" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A8CFF"/>
+      <stop offset="1" stop-color="#084F92"/>
+    </linearGradient>
+    <linearGradient id="cgr2" x1="56" y1="14" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8CC63F"/>
+      <stop offset="1" stop-color="#6EA52F"/>
+    </linearGradient>
   </defs>
-  <circle cx="32" cy="14" r="6.5" fill="#6EA52F"/>
-  <path d="M8 20c9-.9 16 3.5 21 11l4.5 7V58C18.5 51 8 40 8 20Z" fill="url(#cl)"/>
-  <path d="M56 20c-9-.9-16 3.5-21 11L30.5 38V58c14.5-6.5 25.5-18 25.5-38Z" fill="url(#cr)"/>
-  <text x="76" y="30" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700" fill="#0F2234">MCI Career</text>
-  <text x="76" y="48" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#5A7FA8">TALENT &amp; LICENSING</text>
+  <rect x="0" y="4" width="64" height="64" rx="16" fill="#F3F7FB"/>
+  <circle cx="32" cy="20" r="5.5" fill="#6EA52F"/>
+  <path d="M10 26c8.5-.8 15.2 3.2 20 10.2L32 40.5V58C19.5 52.2 10 42.5 10 26Z" fill="url(#cbl2)"/>
+  <path d="M54 26c-8.5-.8-15.2 3.2-20 10.2L32 40.5V58c12.5-5.8 22-15.5 22-32Z" fill="url(#cgr2)"/>
+  <text x="80" y="34" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0F2234" letter-spacing="-0.2">MCI Career</text>
+  <text x="80" y="54" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="11" font-weight="600" letter-spacing="1.8" fill="#5A7FA8">TALENT &amp; LICENSING</text>
 </svg>
